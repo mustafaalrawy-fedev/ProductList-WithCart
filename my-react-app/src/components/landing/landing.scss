@@ -1,0 +1,12 @@
+@use '../../scss/helpers/mixins.scss' as *;
+
+section.desserts-items {
+  display: flex;
+  justify-content: space-between;
+  @include mediaQuery(mobile) {
+    flex-direction: column;
+  }
+  @include mediaQuery(small) {
+    flex-direction: column;
+  }
+}

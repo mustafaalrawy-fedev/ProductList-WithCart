@@ -1,0 +1,15 @@
+@use './rules/global_rules.scss';
+@use './helpers/mixins.scss' as *;
+
+.container {
+  padding: 40px;
+  margin: 20px;
+  @include mediaQuery(mobile) {
+    padding: 15px;
+    margin: 15px;
+  }
+  @include mediaQuery(small) {
+    margin: 15px;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,101 @@
+@use '../../scss/helpers/mixins.scss' as *;
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  background-color: var(--white);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: var(--main-border-radius);
+  transition: 0.5s;
+  max-height: 80vh;
+  overflow: hidden;
+  @include mediaQuery(mobile) {
+    width: 100%;
+  }
+  @include mediaQuery(small) {
+    width: 100%;
+  }
+  &.show {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .modal-info {
+    > h2 {
+      color: var(--Rose-900);
+      margin-block: 8px;
+    }
+  }
+  .modal-content {
+    background-color: var(--body-color);
+    padding: 12px;
+    max-height: 60vh;
+    overflow-y: auto;
+    margin-top: 20px;
+    > .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--Rose-100);
+      &.item:not(:last-child) {
+        margin-bottom: 24px;
+      }
+      > img {
+        width: 50px;
+        border-radius: var(--main-border-radius);
+      }
+      > .item-info {
+        justify-items: flex-start;
+        width: 100%;
+        margin-left: 12px;
+        > h5 {
+          margin-bottom: 8px;
+          color: var(--Rose-900);
+        }
+        > p {
+          > span {
+            margin-right: 12px;
+            color: var(--main-color);
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .total-price {
+      color: var(--Rose-900);
+      font-weight: 500;
+    }
+  }
+  .new-order-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--main-color);
+    color: var(--white);
+    border: none;
+    outline: none;
+    border-radius: 24px;
+    cursor: pointer;
+    margin-top: 24px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.288);
+  transform: scale(0);
+  transition: 0.5s;
+  &.show {
+    transform: scale(1);
+  }
+}

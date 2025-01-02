@@ -1,0 +1,50 @@
+@use '../../../scss/helpers/mixins.scss' as *;
+
+.products {
+  flex-basis: 100%;
+  > h1 {
+    margin-bottom: 24px;
+  }
+  > .product-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 8px;
+    > .product-info {
+      @include mediaQuery(mobile) {
+        width: 100%;
+      }
+      @include mediaQuery(small) {
+        width: 100%;
+      }
+      .image {
+        position: relative;
+        width: 250px;
+        @include mediaQuery(mobile) {
+          width: 100%;
+        }
+        @include mediaQuery(small) {
+          width: 100%;
+        }
+        > img {
+          width: inherit;
+          border-radius: var(--main-border-radius);
+          border: 2px solid transparent;
+          transition: border-color 0.3s ease-in-out;
+          &.active {
+            border: 2px solid var(--main-color);
+          }
+        }
+      }
+      > .info {
+        margin-block: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        > .price {
+          color: var(--main-color);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

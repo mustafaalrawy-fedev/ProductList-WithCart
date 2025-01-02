@@ -1,0 +1,39 @@
+:root {
+  --main-color: hsl(14, 86%, 42%);
+  --success-color: hsl(159, 69%, 38%);
+  --body-color: hsl(20, 50%, 98%);
+  --Rose-100: hsl(13, 31%, 94%);
+  --Rose-300: hsl(14, 25%, 72%);
+  --Rose-400: hsl(7, 20%, 60%);
+  --Rose-500: hsl(12, 20%, 44%);
+  --Rose-900: hsl(14, 65%, 9%);
+  --white: #fff;
+
+  --main-border-radius: 8px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Text', serif;
+  // background-color: var(--body-color);
+  background-color: var(--body-color);
+}
+html {
+  scroll-behavior: smooth;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: var(--Rose-500);
+  font-size: 13px;
+}

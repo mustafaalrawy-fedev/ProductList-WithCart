@@ -1,0 +1,46 @@
+.btn {
+  border-radius: 24px;
+  position: absolute;
+  bottom: -12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  outline: none;
+  //   border: 1px solid var(--main-color);
+  cursor: pointer;
+  > .btn-count,
+  > .add-to-cart {
+    padding: 8px 16px;
+    width: 100%;
+    border-radius: inherit;
+    outline: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid var(--Rose-500);
+    background-color: var(--white);
+    transition: 0.2s ease-in-out;
+    // &:hover {
+    //   color: var(--main-color);
+    //   border-color: var(--main-color);
+    // }
+  }
+  > .btn-count {
+    justify-content: space-between;
+    background-color: var(--main-color);
+    color: var(--white);
+    > .incrementBtn,
+    > .decrementBtn {
+      padding: 4px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--white);
+      border-radius: 50%;
+      color: var(--white);
+      cursor: pointer;
+    }
+  }
+  > .add-to-cart {
+    cursor: pointer;
+  }
+}

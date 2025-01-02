@@ -1,0 +1,34 @@
+@use '../../scss/helpers/mixins.scss' as *;
+
+.cart {
+  padding: 24px;
+  width: 500px;
+  height: fit-content;
+  background-color: var(--white);
+  margin-left: 24px;
+  border-radius: var(--main-border-radius);
+  @include mediaQuery(mobile) {
+    margin-left: 0;
+    width: 100%;
+  }
+  @include mediaQuery(small) {
+    margin-left: 0;
+    width: 100%;
+  }
+  > h3 {
+    color: var(--main-color);
+  }
+  .content {
+    margin-top: 12px;
+    > .empty-cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      > h6 {
+        color: var(--Rose-500);
+        margin-top: 12px;
+      }
+    }
+  }
+}
